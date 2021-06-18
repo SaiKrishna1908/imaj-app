@@ -1,35 +1,65 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12 pagetitle">
-      <h3 class="text-center">
-        Imaj Image Processing
-      </h3>
-      <hr>
+      <h3 class="text-center">Imaj</h3>
+      <hr />
       <div class="row">
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-4 col-section  ">
-          <h3 class="text-center">
-            Upload Image to resize
-          </h3>
+        <div class="col-md-4"></div>
+        <div class="col-md-4 col-section ">
+          <h3 class="text-center">Upload Image to resize</h3>
+          <div class="row ">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 align-items-center justify-content-center">
+              <label for="file">Choose File</label>
+              <input
+                type="file"
+                id="file"
+                (change)="onUpload($event)"
+                class="form-control"
+                ngModel
+                name="file"
+              />
+              <hr />
+            </div>
+            <div class="col-md-4"></div>
+          </div>
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 align-content-center text-center">
+              <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <div>
+                  <label for="height" name="height"></label>
+                    
+                    <input
+                      type="text"
+                      id="height"
+                      class="form-control"
+                      ngModel
+                      name="height"
+                      placeholder="Height"
+                  />
+                </div>
+                <div>
+                  <label for="width" name="width"></label>
+                    <input
+                      type="text"
+                      id="width"
+                      class="form-control"
+                      ngModel
+                      name="width"
+                      placeholder="Width"
+                    />
+                  
+                </div>
+
+                <hr />
+                <button type="submit" class="btn btn-success">Upload</button>
+              </form>
             </div>
-            <div class="col-md-4 align-items-center justify-content-center"  >
-              <input  type="file" (change)="onChange($event)"  >
-              <hr>
-              <button (click)="onUpload()" class="btn btn-success">Upload</button>
-            </div>
-            <div class="col-md-4">
-            </div>
+            <div class="col-sm-3"></div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div >
-            <p>Hello world</p>
-            <img src="data:image;base64, ">
-          </div>
-        </div>
+        <div class="col-md-4"></div>
       </div>
     </div>
   </div>

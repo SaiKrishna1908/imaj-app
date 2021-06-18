@@ -15,13 +15,13 @@ export class ResizeService {
     this.apiUrl = environment.apiBaseUrl;
   }
 
-  upload(file): Observable<any> {
+  upload(file, width,height): Observable<any> {
     const formData = new FormData();
 
-    formData.append('width', '500');
-    formData.append('height', '500');
+    formData.append('width', width);
+    formData.append('height', height);
     formData.append('file', file);
-
+    
     return this.httpClient.post<any>(this.apiUrl, formData );
   }
 }
