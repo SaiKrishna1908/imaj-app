@@ -1,66 +1,72 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12 pagetitle">
-      <h3 class="text-center">Imaj</h3>
-      <hr />
-      <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4 col-section ">
-          <h3 class="text-center">Upload Image to resize</h3>
-          <div class="row ">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 align-items-center justify-content-center">
-              <label for="file">Choose File</label>
-              <input
-                type="file"
-                id="file"
-                (change)="onUpload($event)"
-                class="form-control"
-                ngModel
-                name="file"
-              />
-              <hr />
-            </div>
-            <div class="col-md-4"></div>
-          </div>
-          <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-6 align-content-center text-center">
-              <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-                <div>
-                  <label for="height" name="height"></label>
-                    
-                    <input
-                      type="text"
-                      id="height"
-                      class="form-control"
-                      ngModel
-                      name="height"
-                      placeholder="Height"
-                  />
-                </div>
-                <div>
-                  <label for="width" name="width"></label>
-                    <input
-                      type="text"
-                      id="width"
-                      class="form-control"
-                      ngModel
-                      name="width"
-                      placeholder="Width"
-                    />
-                  
-                </div>
+<p class="h1 text-center">Imaj</p>
 
-                <hr />
-                <button type="submit" class="btn btn-success">Upload</button>
-              </form>
-            </div>
-            <div class="col-sm-3"></div>
-          </div>
-        </div>
-        <div class="col-md-4"></div>
-      </div>
+<hr />
+
+<form
+  (ngSubmit)="onSubmit(f)"
+  #f="ngForm"
+  style="
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60%;
+  "
+>
+  <div
+    class="d-flex flex-column align-items-center justify-content-between"
+    style="width: 100%; height: 50%"
+  >
+    <div class="custom-file w-auto">
+      <label class="custom-file-label" for="customFile" id="chooseFileLabel"
+        >Choose File</label
+      >
+      <input
+        type="file"
+        class="custom-file-input"
+        id="customFile"
+        (change)="onUpload($event)"
+        name="file"
+        ngModel
+      />
+    </div>
+    <div
+      class="row w-100"
+      style="display: inline-flex; justify-content: center"
+    >
+      <input
+        type="text"
+        id="height"
+        class="form-control col-4 col-sm-4 col-md-1 w-75"
+        ngModel
+        name="height"
+        placeholder="Height"
+      />
+      <input
+        type="text"
+        id="width"
+        class="form-control col-4 col-sm-4 col-md-1 w-75"
+        ngModel
+        name="width"
+        placeholder="Width"
+      />
+    </div>
+    <div
+      class="
+        form-group
+        d-flex
+        justify-content-sm-between justify-content-lg-center
+        w-25
+      "
+    >
+      <button type="submit" class="btn btn-primary btn-md">Upload</button>
+      <button
+        type="submit"
+        class="btn btn-success btn-md"
+        (click)="getResizedImage()"
+      >
+        Download
+      </button>
     </div>
   </div>
-</div>
+</form>

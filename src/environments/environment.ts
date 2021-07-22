@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'https://imagr-service.herokuapp.com/'
+  apiBaseUrl: 'http://api.imaj.spikementry.com/',
 };
 
 /*
