@@ -8,11 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes: Routes = [{ path: '', component: ResizeComponent }];
 
 @NgModule({
-  declarations: [AppComponent, ResizeComponent],
+  declarations: [AppComponent, ResizeComponent, NavbarComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

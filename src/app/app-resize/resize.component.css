@@ -12,3 +12,11 @@
   background-color: #ecebed;
   border-radius: 2%;
 }
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}

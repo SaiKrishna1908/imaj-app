@@ -1,6 +1,6 @@
 {
   "/api/*": {
-    "target": "http://api.imaj.spikementry.com/",
+    "target": "https://api.imaj.spikementry.com/",
     "secure": false,
     "pathRewrite": { "^/api": "" },
     "changeOrigin": true,

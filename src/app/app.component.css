@@ -1,1 +1,7 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.main-content {
+  background-color: rgb(241, 238, 233);
+}
+
+.side-nav {
+  height: 100vh;
+}

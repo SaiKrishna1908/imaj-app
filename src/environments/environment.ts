@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://api.imaj.spikementry.com/',
+  apiBaseUrl: 'https://api.imaj.spikementry.com/',
 };
 
 /*

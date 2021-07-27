@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'http://api.imaj.spikementry.com/',
+  apiBaseUrl: 'https://api.imaj.spikementry.com/',
 };

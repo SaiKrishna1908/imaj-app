@@ -33,6 +33,7 @@ export class ResizeComponent implements OnInit {
 
     let label = document.getElementById('chooseFileLabel');
     label.innerHTML = this.file.name;
+    this.errorMessage = null;
   }
 
   onSubmit(f: NgForm): void {
@@ -50,13 +51,13 @@ export class ResizeComponent implements OnInit {
           this.data = data['id'];
           this.hide = false;
         }
+        this.resizedImage = true;
       },
       (error) => {
         this.errorMessage = 'Error Resizing File';
       }
     );
     console.log(this.data);
-    this.resizedImage = true;
   }
 
   getResizedImage(): void {
@@ -72,5 +73,6 @@ export class ResizeComponent implements OnInit {
         console.log('error downloading file');
       }
     );
+    this.resizedImage = false;
   }
 }
