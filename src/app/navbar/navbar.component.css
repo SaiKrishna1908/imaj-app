@@ -23,3 +23,17 @@ li {
   list-style-type: none;
   width: 100%;
 }
+
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-sidenav,
+mat-sidenav-content {
+  padding: 10px;
+}
+
+mat-sidenav {
+  background-color: grey;
+  width: 200px;
+}

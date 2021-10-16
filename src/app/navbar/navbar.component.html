@@ -1,13 +1,13 @@
-<div class="navbar-container">
-  <ul>
-    <li>
-      <h4><b>Resize</b></h4>
-    </li>
-    <li>
-      <h4><b>Reshape</b></h4>
-    </li>
-    <li>
-      <h4><b>Grayscale</b></h4>
-    </li>
-  </ul>
-</div>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [(opened)]="navbarOpened">
+    <ul>
+      <li>App resize</li>
+      <li>App resize</li>
+      <li>App resize</li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button (click)="navbarOpened = !navbarOpened">&#10140;</button>
+    <app-resize></app-resize>
+  </mat-sidenav-content>
+</mat-sidenav-container>

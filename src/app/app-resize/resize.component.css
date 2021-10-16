@@ -20,3 +20,17 @@
   align-items: center;
   height: 100%;
 }
+
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-sidenav,
+mat-sidenav-content {
+  padding: 10px;
+}
+
+mat-sidenav {
+  background-color: gold;
+  width: 200px;
+}

@@ -27,6 +27,7 @@ export class ResizeService {
 
     formData.append('imageType', imageType.toUpperCase());
 
+
     return this.httpClient.post<any>(this.apiUrl, formData);
   }
 

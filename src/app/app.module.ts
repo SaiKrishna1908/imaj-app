@@ -7,8 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MaterialModule } from './material/material.module';
 
 const appRoutes: Routes = [{ path: '', component: ResizeComponent }];
 
@@ -20,7 +20,7 @@ const appRoutes: Routes = [{ path: '', component: ResizeComponent }];
     FormsModule,
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
-    MatButtonModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
