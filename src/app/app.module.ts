@@ -9,9 +9,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MaterialModule } from './material/material.module';
 import { AppRoutingModule } from './app-routing.module';
+import { AppGrayscaleComponent } from './app-grayscale/app-grayscale.component';
 
 @NgModule({
-  declarations: [AppComponent, ResizeComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    ResizeComponent,
+    NavbarComponent,
+    AppGrayscaleComponent,
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,

@@ -2,10 +2,12 @@
   <mat-sidenav mode="side" opened>
     <ul>
       <li *ngFor="let option of options">
-        <button color="accent" mat-button class="menu-button">
-          <i class="{{ option.icon }}"></i>
-          <h4>{{ option.name }}</h4>
-        </button>
+        <a [routerLink]="option.link">
+          <button color="accent" mat-button class="menu-button">
+            <i class="{{ option.icon }}"></i>
+            <h4>{{ option.name }}</h4>
+          </button>
+        </a>
       </li>
     </ul>
   </mat-sidenav>
