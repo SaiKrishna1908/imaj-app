@@ -7,8 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   navbarOpened = false;
+  pageOption = 0;
+  constructor() {
+    this.navbarOpened = false;
+  }
 
-  constructor() {}
+  options = [
+    { name: 'Resize', icon: 'fas fa-crop icon-2x' },
+    { name: 'To Grayscale Image', icon: 'fas fa-eye-dropper icon-2x' },
+    { name: 'Rotate', icon: 'fas fa-undo icon-2x' },
+  ];
 
   ngOnInit(): void {}
 }

@@ -5,3 +5,7 @@
 .side-nav {
   height: 100vh;
 }
+
+mat-grid-tile {
+  background: lightblue;
+}

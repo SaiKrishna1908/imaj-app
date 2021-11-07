@@ -1,13 +1,15 @@
 <mat-sidenav-container>
-  <mat-sidenav mode="side" [(opened)]="navbarOpened">
+  <mat-sidenav mode="side" opened>
     <ul>
-      <li>App resize</li>
-      <li>App resize</li>
-      <li>App resize</li>
+      <li *ngFor="let option of options">
+        <button color="accent" mat-button class="menu-button">
+          <i class="{{ option.icon }}"></i>
+          <h4>{{ option.name }}</h4>
+        </button>
+      </li>
     </ul>
   </mat-sidenav>
   <mat-sidenav-content>
-    <button (click)="navbarOpened = !navbarOpened">&#10140;</button>
-    <app-resize></app-resize>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
